@@ -2,7 +2,7 @@
 
 # Official Passbase Angular Demo App
 
-This App shows an example integration of the Passbase Web Snipped integratedd into an Angular App. Before your try to run the App please sign up on our [developer platform](https://app.passbase.com/signup) and use **your own publishabe API key**, which you can find in the [API settings](https://app.passbase.com/settings/api) section. 
+This App shows an example integration of the Passbase Web Snippet integrated into an Angular App. Before your try to run the App please sign up on our [developer platform](https://app.passbase.com/signup) and use **your own publishabe API key**, which you can find in the [API settings](https://app.passbase.com/settings/api) section. 
 
 Please follow our integration guide in our [official developer documentation](https://docs.passbase.com/integrations/angular) to install all dependencies first in a correct way.
 
