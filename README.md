@@ -14,8 +14,8 @@ Ensure that you are using an up to date version for Angular. This means, that yo
 
 In the project directory can run:
 
-1. Run `npm install` inside the project directory in terminal in order to install the Passbase Package
-2. Go into the file `src/app/app.component.ts` and exchange `YOUR_OWN_PUBLISHABLE_API_KEY` with your own API key in line 14
-3. Run `ng serve` in terminal
+1. Run `npm install` inside the project directory in terminal in order to install all dependencies
+2. Go into the file `src/app/app.component.ts` and exchange `YOUR_OWN_PUBLISHABLE_API_KEY` with your own publishable API key in line 14
+3. Run `ng serve` in terminal 
 
 This runs the app in the development mode. Open [http://localhost:4200](http://localhost:4200) to view the App it in the browser.
