@@ -1,0 +1,36 @@
+
+.container{
+padding-top: 20vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background: #FFFFFF;
+font-family: "Arial";
+}
+
+.title{
+font-size: 36px;
+font-weight: 600;
+color: #033156;
+white-space: pre-line;
+text-align: center;
+line-height: 44px;
+
+}
+
+.subtitle{
+margin-bottom: 20px;
+margin-top: 13px;
+opacity: 0.75;
+font-size: 16px;
+font-weight: 500;
+color: #506b80;
+white-space: pre-line;
+text-align: center;
+}
+
+.passbase{
+margin: 30px 40px;
+height: 25px;
+}

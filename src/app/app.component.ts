@@ -10,8 +10,36 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // @ts-ignore
-    Passbase.renderButton(document.getElementById('passbase-button'), (err, passport) => {},
-      'YOUR_OWN_PUBLISHABLE_API_KEY', {});
+    // Passbase Authentication Flow
+    Passbase.renderButton(
+      document.getElementById('passbase-button'), 
+      (err, passport) => {},
+      "YOUR_OWN_PUBLISHABLE_API_KEY",
+      {
+        integrationType: "signup",
+        additionalAttributes: {
+          customer_user_id: "SOME_USER_ID"
+        },
+        prefillAttributes:{
+          email: "user@email.de",
+          country: "de"
+        },
+        theme: {
+          accentColor: "#ff0000",
+          font: "Fira"
+        }
+      }
+    )
+
+    // Passbase Reauthentication Flow
+    // Passbase.renderButton(
+    //   document.getElementById('passbase-button'), 
+    //   (err, passport) => {},
+    //   "YOUR_OWN_PUBLISHABLE_API_KEY",
+    //   {
+    //     integrationType: "login"
+    //   }
+    // )
   }
 
 
