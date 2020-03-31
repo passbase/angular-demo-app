@@ -21,8 +21,8 @@ export class AppComponent implements OnInit {
           customer_user_id: "SOME_USER_ID"
         },
         prefillAttributes:{
-          email: "user@email.de",
-          country: "de"
+          email: "",
+          country: "en"
         },
         theme: {
           accentColor: "#ff0000",
