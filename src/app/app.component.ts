@@ -1,46 +1,28 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import Passbase from "@passbase/button";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  title = 'passbase-test';
+  title = "passbase-test";
 
-  ngOnInit(): void {
-    // @ts-ignore
-    // Passbase Authentication Flow
+  @ViewChild("passbaseButton", { static: false }) passbaseButton: ElementRef;
+
+  ngOnInit(): void {}
+
+  ngAfterViewInit() {
     Passbase.renderButton(
-      document.getElementById('passbase-button'), 
-      (err, passport) => {},
-      "YOUR_OWN_PUBLISHABLE_API_KEY",
+      this.passbaseButton.nativeElement,
+      "YOUR_API_KEY",
       {
-        integrationType: "signup",
-        additionalAttributes: {
-          customer_user_id: "SOME_USER_ID"
-        },
-        prefillAttributes:{
-          email: "",
-          country: "en"
-        },
-        theme: {
-          accentColor: "#ff0000",
-          font: "Fira"
-        }
+        onFinish: (identityAccessKey) => {},
+        onSubmitted: (identityAccessKey) => {},
+        onError: (errorCode) => {},
+        onStart: () => {},
       }
-    )
-
-    // Passbase Reauthentication Flow
-    // Passbase.renderButton(
-    //   document.getElementById('passbase-button'), 
-    //   (err, passport) => {},
-    //   "YOUR_OWN_PUBLISHABLE_API_KEY",
-    //   {
-    //     integrationType: "login"
-    //   }
-    // )
+    );
   }
-
-
 }
